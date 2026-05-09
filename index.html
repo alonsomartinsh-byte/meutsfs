@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>App Preview</title>
+    <title>App Protótipo</title>
 
-    <!-- Configurações para virar "App" no iPhone -->
+    <!-- Configurações de Web App para iPhone -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-icon" href="icone.png">
-
-    <!-- Configurações para virar "App" no Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="icone.png">
+    
+    <!-- Mudei para .jpg para garantir que o fundo amarelo apareça sólido -->
+    <link rel="apple-touch-icon" href="icone.jpg?v=2">
 
     <style>
-        /* Reset básico para remover espaços e travar movimento lateral */
+        /* Remove espaços indesejados e trava o zoom */
         * {
             margin: 0;
             padding: 0;
@@ -25,40 +23,32 @@
 
         body, html {
             width: 100%;
+            height: 100%;
             overflow-x: hidden;
             background-color: #000;
-            /* Garante que o scroll seja suave no iOS */
             -webkit-overflow-scrolling: touch;
         }
 
-        /* Container que segura a imagem */
-        .app-wrapper {
+        .container {
             width: 100vw;
             display: flex;
             flex-direction: column;
         }
 
-        /* A imagem ocupará a largura total e a altura será proporcional aos 3840px */
-        .app-screen {
+        .app-img {
             width: 100%;
             height: auto;
             display: block;
-            /* Evita borrões em imagens de alta resolução */
+            /* Garante que a imagem fique nítida */
             image-rendering: -webkit-optimize-contrast;
         }
 
-        /* Esconde a barra de rolagem no Chrome, Safari e Edge */
+        /* Esconde a barra lateral de rolagem */
         ::-webkit-scrollbar {
             display: none;
         }
 
-        /* Esconde a barra de rolagem no Firefox e IE */
-        html {
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-
-        /* Impede que o usuário selecione a imagem ou salve (ajuda no disfarce) */
+        /* Bloqueia interação de salvar imagem para parecer app nativo */
         img {
             pointer-events: none;
             user-select: none;
@@ -68,9 +58,9 @@
 </head>
 <body>
 
-    <div class="app-wrapper">
-        <!-- Certifique-se de que o nome do arquivo abaixo seja igual ao da sua imagem -->
-        <img src="app-layout.jpg" alt="Interface" class="app-screen">
+    <div class="container">
+        <!-- Nome da sua imagem de 3840px de altura -->
+        <img src="app-layout.jpg?v=2" alt="App Screen" class="app-img">
     </div>
 
 </body>
