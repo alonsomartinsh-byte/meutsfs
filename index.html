@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- O viewport-fit=cover é o que faz a imagem subir para trás da barra de status -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>App Protótipo</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Black-translucent deixa a barra de status flutuando sobre a imagem -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icone.jpg?v=4">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            background-color: #000;
+            overflow-x: hidden;
+            /* Garante que o scroll comece do topo absoluto */
+            padding-top: 0; 
+        }
+
+        .container {
+            width: 100%;
+            display: block; /* Voltamos para block para não forçar altura */
+            line-height: 0;
+        }
+
+        .app-img {
+            width: 100%;
+            height: auto; /* Mantém a proporção exata do seu arquivo */
+            display: block;
+        }
+
+        /* Esconde a barra lateral */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        img {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="app-layout.jpg?v=4" alt="Interface" class="app-img">
+    </div>
+
+</body>
+</html>
