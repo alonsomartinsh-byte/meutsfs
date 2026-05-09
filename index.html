@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>App Protótipo</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icone.jpg?v=5">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            background-color: #000;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .container {
+            width: 100%;
+            line-height: 0;
+        }
+
+        /* Imagem principal que rola */
+        .app-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* NOVA IMAGEM FIXA NO RODAPÉ */
+        .footer-fixo {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 999;
+            pointer-events: none; /* Permite que o toque passe para o que está atrás se necessário */
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        img {
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Imagem principal (3840px) -->
+        <img src="app-layout.jpg?v=5" alt="Interface" class="app-img">
+    </div>
+
+    <!-- Imagem do Rodapé Fixa -->
+    <img src="rodape.jpg?v=5" alt="Menu" class="footer-fixo">
+
+</body>
+</html>
